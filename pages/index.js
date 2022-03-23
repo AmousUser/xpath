@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////
 
-const HomePage = () => <div>Home Page</div>;
+const HomePage = () => <div>Say Hello</div>;
 
 export default HomePage;
