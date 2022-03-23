@@ -1,0 +1,5 @@
+//////////////////////////////////////////////////
+
+const Footer = () => <header>FOOTER</header>;
+
+export default Footer;
