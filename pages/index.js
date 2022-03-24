@@ -1,4 +1,4 @@
-import { Box, Button } from '../ui';
+import { Box, } from '../ui';
 //////////////////////////////////////////////////
 
 const HomePage = () => (
