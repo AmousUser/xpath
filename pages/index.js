@@ -1,5 +1,8 @@
+import { Box, Button } from '../ui';
 //////////////////////////////////////////////////
 
-const HomePage = () => <div>Say Hello</div>;
+const HomePage = () => (
+  <Box fontSize={{ _: 10, sm: 24 }}>Say Hello</Box>
+);
 
 export default HomePage;

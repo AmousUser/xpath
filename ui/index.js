@@ -14,6 +14,7 @@ import {
   opacity,
   minWidth,
   maxWidth,
+  fontSize,
   flexWrap,
   position,
   overflow,
@@ -21,6 +22,10 @@ import {
   alignSelf,
   maxHeight,
   borderTop,
+  textAlign,
+  fontFamily,
+  lineHeight,
+  fontWeight,
   alignItems,
   borderLeft,
   background,
@@ -48,6 +53,7 @@ export const Box = styled.div`
   ${maxWidth}
   ${overflow}
   ${overflowY}
+  ${fontSize}
   ${alignSelf}
   ${maxHeight}
   ${borderTop}
