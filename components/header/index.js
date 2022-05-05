@@ -80,7 +80,7 @@ const Header = ({ router, handleOpenModal }) => {
 
   return (
     <>
-      <HeaderWrapper startTransition={startTransition}>
+      <HeaderWrapper opened={opened} startTransition={startTransition}>
         <FlexBox
           mx='auto'
           width='100%'
