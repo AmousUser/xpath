@@ -68,7 +68,7 @@ const NavMenu = ({ color, items, activeNavItem }) => (
   </Nav>
 );
 
-const Header = ({ router, handleOpenModal, handleCloseModal }) => {
+const Header = ({ router, handleOpenModal }) => {
   const { width } = useWindowSize();
   const [opened, setOpened] = useState(false);
   const { startTransition } = useTransition();
@@ -98,6 +98,7 @@ const Header = ({ router, handleOpenModal, handleCloseModal }) => {
                 height='40px'
                 color={color}
                 iconName='xpathLogo'
+                handleClick={() => setOpened(false)}
               />
             </a>
           </Link>
@@ -154,7 +155,7 @@ const Header = ({ router, handleOpenModal, handleCloseModal }) => {
                 color={color}
                 display='block'
                 fontWeight='500'
-                onClick={handleCloseModal}
+                onClick={() => setOpened(false)}
                 fontSize={{ xs: 14, md: 15, lg: 16 }}
                 opacity={activeNavItem('/') ? 1 : 0.8}
               >
@@ -167,7 +168,7 @@ const Header = ({ router, handleOpenModal, handleCloseModal }) => {
                 color={color}
                 display='block'
                 fontWeight='500'
-                onClick={handleCloseModal}
+                onClick={() => setOpened(false)}
                 fontSize={{ xs: 14, md: 15, lg: 16 }}
                 opacity={activeNavItem('/faq') ? 1 : 0.8}
               >
@@ -180,7 +181,7 @@ const Header = ({ router, handleOpenModal, handleCloseModal }) => {
               target='_blank'
               display='block'
               fontWeight='500'
-              onClick={handleCloseModal}
+              onClick={() => setOpened(false)}
               fontSize={{ xs: 14, md: 15, lg: 16 }}
               href='https://xpath.amoustms.com/login'
             >
