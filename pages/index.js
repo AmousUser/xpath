@@ -3,14 +3,12 @@ import ImageComponent from '../components/image';
 // ui
 import {
   Box,
-  Text,
   Button,
   Article,
   Section,
   FlexBox,
   PageTitle,
   RelativeBox,
-  AbsoluteBox,
   SectionTitle,
 } from '../ui';
 //////////////////////////////////////////////////
@@ -306,7 +304,6 @@ const HomePage = ({ handleOpenModal }) => (
         >
           XPath in Numbers
         </PageTitle>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
         </Article>
         <FlexBox justifyContent='space-between'>
           {
