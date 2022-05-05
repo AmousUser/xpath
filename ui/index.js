@@ -209,6 +209,7 @@ export const StyledLink = styled.a`
   ${display}
   ${opacity}
   ${fontSize}
+  ${textAlign}
   ${fontWeight}
   ${justifyContent}
 

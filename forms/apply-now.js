@@ -113,7 +113,6 @@ const ApplyNowFormComponent = ({ handleCloseModal }) => {
     <Box
       bg='white'
       width={600}
-      minHeight={385}
       maxHeight='80vh'
       overflowY='auto'
       borderRadius='8px'
@@ -124,8 +123,9 @@ const ApplyNowFormComponent = ({ handleCloseModal }) => {
           <FlexBox justifyContent='flex-end'>
             <Icon iconName='cross' handleClick={handleCloseModal} />
           </FlexBox>
-          <FlexBox mt={{ xs: 20, sm: 30 }} justifyContent='center'>
-            Sended
+          <FlexBox mt={20} justifyContent='center'>
+            {/* eslint-disable-next-line */}
+            Thank you for applying to Xpath. We’re looking forward to partnering with you! Someone will be reaching out to you shortly.
           </FlexBox>
         </>
       )}

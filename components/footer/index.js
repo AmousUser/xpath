@@ -62,16 +62,16 @@ const contactsColumn = {
     {
       ml: 10,
       icon: 'phoneIcon',
-      name: '(630)-247-7077',
+      name: '(904) 604-8904',
       textDecoration: 'underline',
-      linkTo: 'tel: +1 630-247-7077',
+      linkTo: 'tel: +19046048904',
     },
     {
       ml: 10,
       icon: 'mailIcon',
       textDecoration: 'underline',
-      name: 'admin@xpathlogistics.com',
-      linkTo: 'mailto: admin@xpathlogistics.com',
+      name: 'apply@xpathlogistics.com',
+      linkTo: 'mailto:apply@xpathlogistics.com',
     },
   ],
 };

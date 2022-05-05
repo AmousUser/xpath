@@ -8,9 +8,9 @@ import ApplyNowFormComponent from '../../forms/apply-now';
 import { ModalWrapper } from '../../ui';
 //////////////////////////////////////////////////
 
-const Layout = ({ router, children, modalOpened, handleOpenModal }) => (
+const Layout = ({ router, children, modalOpened, handleOpenModal, handleCloseModal }) => (
   <>
-    <Header router={router} handleOpenModal={handleOpenModal} handleCloseModal={handleCloseModal} />
+    <Header router={router} handleOpenModal={handleOpenModal} />
     <main>
       {children}
     </main>

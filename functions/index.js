@@ -38,8 +38,8 @@ exports.sendMail = functions.https.onRequest((req, res) => {
 
     const mailOptions = {
       html,
-      subject: "From Xpath",
       from: "XPath website",
+      subject: "From Xpath Website",
       to: "apply@xpathlogistics.com",
     };
 

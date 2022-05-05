@@ -155,6 +155,7 @@ const Header = ({ router, handleOpenModal }) => {
                 color={color}
                 display='block'
                 fontWeight='500'
+                textAlign='center'
                 onClick={() => setOpened(false)}
                 fontSize={{ xs: 14, md: 15, lg: 16 }}
                 opacity={activeNavItem('/') ? 1 : 0.8}
@@ -168,6 +169,7 @@ const Header = ({ router, handleOpenModal }) => {
                 color={color}
                 display='block'
                 fontWeight='500'
+                textAlign='center'
                 onClick={() => setOpened(false)}
                 fontSize={{ xs: 14, md: 15, lg: 16 }}
                 opacity={activeNavItem('/faq') ? 1 : 0.8}
@@ -181,6 +183,7 @@ const Header = ({ router, handleOpenModal }) => {
               target='_blank'
               display='block'
               fontWeight='500'
+              textAlign='center'
               onClick={() => setOpened(false)}
               fontSize={{ xs: 14, md: 15, lg: 16 }}
               href='https://xpath.amoustms.com/login'
