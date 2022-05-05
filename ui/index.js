@@ -10,19 +10,22 @@ import {
   bottom,
   height,
   border,
+  zIndex,
   display,
   opacity,
   minWidth,
   maxWidth,
-  fontSize,
   flexWrap,
   position,
   overflow,
+  fontSize,
   overflowY,
+  minHeight,
+  boxShadow,
+  textAlign,
   alignSelf,
   maxHeight,
   borderTop,
-  textAlign,
   fontFamily,
   lineHeight,
   fontWeight,
@@ -36,6 +39,7 @@ import {
   borderRadius,
   flexDirection,
   justifyContent,
+  backgroundColor,
 } from 'styled-system';
 ////////////////////////////////////////////////////
 
@@ -46,26 +50,32 @@ export const Box = styled.div`
   ${color}
   ${height}
   ${border}
+  ${zIndex}
   ${opacity}
   ${display}
   ${minWidth}
   ${position}
   ${maxWidth}
   ${overflow}
+  ${minHeight}
   ${overflowY}
-  ${fontSize}
   ${alignSelf}
+  ${textAlign}
   ${maxHeight}
   ${borderTop}
   ${background}
   ${borderLeft}
-  ${borderColor}
   ${borderRight}
   ${borderBottom}
+  ${borderColor}
   ${borderRadius}
+
+  cursor: ${({ cursor }) => cursor};
+  transition: ${({ transition }) => transition};
 `;
 
 export const FlexBox = styled(Box)`
+  ${maxWidth}
   ${flexWrap}
   ${alignItems}
   ${flexDirection}
@@ -74,7 +84,23 @@ export const FlexBox = styled(Box)`
   display: ${({ display }) => display || 'flex'};
 `;
 
+export const HoveredFlexBox = styled(FlexBox)`
+  &:hover {
+    color: ${({ hoveredColor }) => hoveredColor};
+    font-weight: ${({ hoveredFontWeight }) => hoveredFontWeight};
+  }
+`;
+
 export const RelativeBox = styled(Box)`
+  ${top}
+  ${left}
+  ${right}
+  ${bottom}
+
+  position: relative;
+`;
+
+export const RelativeFlexBox = styled(FlexBox)`
   ${top}
   ${left}
   ${right}
@@ -93,19 +119,52 @@ export const AbsoluteBox = styled(Box)`
   position: absolute;
 `;
 
+export const FixedFlexBox = styled(FlexBox)`
+  ${top}
+  ${left}
+  ${right}
+  ${bottom}
+  ${boxShadow}
+
+  position: fixed;
+  
+  transition: ${({ transition }) => transition};
+  border-bottom-left-radius: ${({ borderBLRadius }) => borderBLRadius};
+  border-bottom-right-radius: ${({ borderBRRadius }) => borderBRRadius};
+`;
+
 export const Article = styled.article`
   ${space}
   ${width}
   ${color}
   ${height}
+  ${display}
+  ${fontSize}
   ${maxWidth}
+  ${background}
+  ${backgroundColor}
 `;
 
 export const Section = styled.section`
   ${space}
   ${width}
+  ${color}
   ${height}
+  ${zIndex}
+  ${position}
+  ${display}
   ${maxWidth}
+  ${minWidth}
+  ${borderTop}
+  ${background}
+  ${alignItems}
+  ${borderLeft}
+  ${borderRight}
+  ${borderColor}
+  ${flexDirection}
+  ${justifyContent}
+
+  cursor: ${({ cursor }) => cursor};
 `;
 
 const InstanceButton = styled.button`
@@ -122,6 +181,7 @@ const InstanceButton = styled.button`
   ${borderColor}
 
   transition: ${({ transition }) => transition};
+  cursor: ${({ cursor }) => cursor || 'pointer'};
   text-transform: ${({ textTransform }) => textTransform};
 `;
 
@@ -131,22 +191,29 @@ export const IconWrapper = styled.div`
   ${space}
   ${order}
   ${width}
+  ${right}
+  ${bottom}
   ${border}
   ${height}
   ${display}
   ${position}
 
   user-select: none;
+  transform: ${({ transform }) => transform};
   cursor: ${({ cursor }) => cursor || 'pointer'};
 `;
 
 export const StyledLink = styled.a`
   ${color}
   ${space}
+  ${display}
   ${opacity}
   ${fontSize}
   ${fontWeight}
+  ${justifyContent}
+
   cursor: pointer;
+
   text-transform: ${({ textTransform }) => textTransform};
 
   &:hover {
@@ -165,7 +232,9 @@ export const Text = styled.p`
   ${lineHeight}
   ${fontFamily}
   ${fontWeight}
-
+  ${borderBottom}
+  ${borderColor}
+  
   cursor: ${({ cursor }) => cursor};
   word-break: ${({ wordBreak }) => wordBreak};
   text-decoration: ${({ textDecoration }) => textDecoration};
@@ -189,6 +258,7 @@ export const PageTitle = styled.h1`
 export const SectionTitle = styled.h2`
   ${space}
   ${color}
+  ${width}
   ${fontSize}
   ${textAlign}
   ${lineHeight}
@@ -201,10 +271,27 @@ export const SectionTitle = styled.h2`
 export const ArticleTitle = styled.h3`
   ${space}
   ${color}
+  ${width}
   ${fontSize}
   ${textAlign}
   ${lineHeight}
   ${fontWeight}
 
   text-transform: ${({ textTransform }) => textTransform};
+`;
+
+export const ModalWrapper = styled.div`
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  backdrop-filter: blur(20px);
+
+  background: ${({ background }) => background};
+  justify-content: ${({ justifyContent }) => justifyContent || 'center'};
 `;

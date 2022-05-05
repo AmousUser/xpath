@@ -4,32 +4,36 @@ import * as I from './icons';
 import { IconWrapper } from '../ui';
 //////////////////////////////////////////////////
 
-const Icon = (props) => {
+const Icon = props => {
   const {
     w,
     h,
+    ml,
     color,
-    space,
     order,
     right,
     width,
     border,
     height,
+    bottom,
     position,
     iconName,
+    transform,
     handleClick,
   } = props;
 
   const iconProps = { w, h, color };
 
   const styles = {
-    space,
+    ml,
     order,
     right,
     width,
     border,
+    bottom,
     height,
     position,
+    transform,
   };
 
   return (
