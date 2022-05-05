@@ -68,7 +68,7 @@ const NavMenu = ({ color, items, activeNavItem }) => (
   </Nav>
 );
 
-const Header = ({ router, handleOpenModal }) => {
+const Header = ({ router, handleOpenModal, handleCloseModal }) => {
   const { width } = useWindowSize();
   const [opened, setOpened] = useState(false);
   const { startTransition } = useTransition();
@@ -154,6 +154,7 @@ const Header = ({ router, handleOpenModal }) => {
                 color={color}
                 display='block'
                 fontWeight='500'
+                onClick={handleCloseModal}
                 fontSize={{ xs: 14, md: 15, lg: 16 }}
                 opacity={activeNavItem('/') ? 1 : 0.8}
               >
@@ -166,6 +167,7 @@ const Header = ({ router, handleOpenModal }) => {
                 color={color}
                 display='block'
                 fontWeight='500'
+                onClick={handleCloseModal}
                 fontSize={{ xs: 14, md: 15, lg: 16 }}
                 opacity={activeNavItem('/faq') ? 1 : 0.8}
               >
@@ -178,6 +180,7 @@ const Header = ({ router, handleOpenModal }) => {
               target='_blank'
               display='block'
               fontWeight='500'
+              onClick={handleCloseModal}
               fontSize={{ xs: 14, md: 15, lg: 16 }}
               href='https://xpath.amoustms.com/login'
             >
@@ -187,21 +190,6 @@ const Header = ({ router, handleOpenModal }) => {
         )}
 
       </FixedFlexBox>
-      {/* {opened && (
-        <FixedBox top='90px' width='100%' bg={startTransition === false ? 'black' : 'white'}>
-          <NavMenu color={color} items={navItems} activeNavItem={activeNavItem} />
-          <StyledLink
-            mt={10}
-            color={color}
-            target='_blank'
-            fontWeight='500'
-            fontSize={{ xs: 14, md: 15, lg: 16 }}
-            href='https://xpath.amoustms.com/login'
-          >
-              Portal Login
-          </StyledLink>
-        </FixedBox>
-      )} */}
     </>
   );
 };

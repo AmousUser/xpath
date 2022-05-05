@@ -10,7 +10,7 @@ import { ModalWrapper } from '../../ui';
 
 const Layout = ({ router, children, modalOpened, handleOpenModal, handleCloseModal }) => (
   <>
-    <Header router={router} handleOpenModal={handleOpenModal} />
+    <Header router={router} handleOpenModal={handleOpenModal} handleCloseModal={handleCloseModal} />
     <main>
       {children}
     </main>
