@@ -1,15 +1,29 @@
 // components
+import Portal from '../portal';
 import Footer from '../footer';
 import Header from '../header';
+// forms
+import ApplyNowFormComponent from '../../forms/apply-now';
+// ui
+import { ModalWrapper } from '../../ui';
 //////////////////////////////////////////////////
 
-const Layout = ({ router, children }) => (
+const Layout = ({ router, children, modalOpened, handleOpenModal, handleCloseModal }) => (
   <>
-    <Header router={router} />
+    <Header router={router} handleOpenModal={handleOpenModal} />
     <main>
       {children}
     </main>
-    <Footer router={router} />
+    <Footer router={router} handleOpenModal={handleOpenModal} />
+    {
+      modalOpened && (
+        <Portal selector='#modal'>
+          <ModalWrapper background='rgba(0, 0, 0, 0.8)'>
+            <ApplyNowFormComponent handleCloseModal={handleCloseModal} />
+          </ModalWrapper>
+        </Portal>
+      )
+    }
   </>
 );
 

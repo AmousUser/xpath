@@ -29,6 +29,7 @@ const toBase64 = str =>
 
 const ImageComponent = props => {
   const { placeholder } = props;
+
   if (placeholder === 'blur') {
     return (
       <Image
