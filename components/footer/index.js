@@ -38,15 +38,15 @@ const socialColumn = {
   links: [
     {
       name: 'Facebook',
-      linkTo: '#facebook',
+      linkTo: 'https://www.facebook.com/Xpath-Logistics-110078241666641',
     },
     {
       name: 'Instagram',
-      linkTo: '#instagram',
+      linkTo: 'https://www.instagram.com/xpathlogistics/',
     },
     {
       name: 'Linkedin',
-      linkTo: '#linkedin',
+      linkTo: 'https://www.linkedin.com/company/xpath-logistics/',
     },
   ],
 };

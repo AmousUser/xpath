@@ -12,6 +12,10 @@ export default createGlobalStyle`
       text-decoration: none;
     }
 
+    ul {
+      line-height: 40px;
+    }
+
   * {
     border: 0;
     margin: 0;

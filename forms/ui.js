@@ -16,7 +16,7 @@ export const StyledInput = styled.input`
   border: 1px solid;
   border-radius: 4px;
 
-  border-color: ${({ hasError }) => getBorderColor(hasError)};
+  border-color: ${({ name, touched = {}, errors = {} }) => getBorderColor(touched[name] && errors[name])};
 `;
 
 export const RadioInput = styled.input`

@@ -3,6 +3,7 @@ import ImageComponent from '../components/image';
 // ui
 import {
   Box,
+  Video,
   Button,
   Article,
   Section,
@@ -13,24 +14,24 @@ import {
 } from '../ui';
 //////////////////////////////////////////////////
 
-const articles = [
+const articles_2 = [
   {
-    src: '/images/technology.png',
-    title: 'The right Technology',
+    src: '/images/cards.svg',
+    title: 'Better Earnings',
     // eslint-disable-next-line max-len
-    text: 'We use Amous TMS as the backbone to drive your sucess. With your own login you can monitor your operations at anytime and anywhere. This gives you the visibility and transperancy that will drive a great business partnership.'
+    text: 'Xpath only charges 10% off the gross for each load dispatched to you. This means more money flowing to your company, with average savings of 10-20% per load.'
   },
   {
-    src: '/images/people.png',
-    title: 'The right People',
+    title: 'Stable Loads',
+    src: '/images/logistics-2.svg',
+    // eslint-disable-next-line max-len
+    text: 'We have established customers that will give you the best, steady loads on the market. Any mode, anytime, we will make sure to keep your trucks covered and moving. ',
+  },
+  {
+    title: 'Respect',
+    src: '/images/respect.svg',
     // eslint-disable-next-line max-len
     text: 'We hire people with 1 term in-mind: honesty. Our employees make sure you are treated like a human-being that receives honest communications and fair payment for any load that you transport.',
-  },
-  {
-    src: '/images/load.png',
-    title: 'The right Loads',
-    // eslint-disable-next-line max-len
-    text: 'Our priority is to find loads that meet your exact criteria. You give us the rules, and we follow. Our 24/7 dispatching team is in contact with the largest brokers and shippers, creating a network to find the right loads for you.',
   },
 ];
 
@@ -93,118 +94,196 @@ const HomePage = ({ handleOpenModal }) => (
             Apply Now
           </Button>
         </Section>
-        <RelativeBox
-          height={{ xs: 300, lg: 400, xl: 450 }}
+        <Video
+          controls={true}
+          poster='/images/poster.png'
           width={{ xs: '100%', sm: '48%', md: 600, xl: 720 }}
         >
-          <ImageComponent
-            layout='fill'
-            placeholder='blur'
-            src='/images/image_2.png'
-          />
-        </RelativeBox>
+          <source src='/videos/Xpath Logistics Intro Video Final.mp4' type='video/mp4' />
+        </Video>
       </FlexBox>
     </Box>
+    <Section
+      bg='lightGrey'
+      px={{ xs: 20, lg: 40, xl: 0 }}
+      py={{ xs: 30, lg: 50, xl: 70 }}
+    >
+      <SectionTitle
+        textAlign='center'
+        fontFamily='Ethnocentric'
+        textTransform='uppercase'
+        fontSize={{ xs: 36,lg: 40, xl: 46 }}
+      >
+        our owner-ops save 15-20% per load
+      </SectionTitle>
+    </Section>
+    <Section
+      mx='auto'
+      maxWidth={1200}
+      px={{ xs: 20, lg: 40, xl: 0 }}
+      py={{ xs: 50, lg: 100, xl: 120 }}
+    >
+      <PageTitle
+        color='mainDark'
+        fontFamily='Ethnocentric'
+        fontSize={{ xs: 38, lg: 42, xl: 52 }}
+        lineHeight={{ xs: '56px', lg: '62px', xl: '78px' }}
+      >
+        Why choose <br />XPath?
+      </PageTitle>
+      {/* <FlexBox
+        flexWrap={{ xs: 'wrap', lg: 'nowrap' }}
+        justifyContent={{ xs: 'center', sm: 'space-between' }}
+      >
+        {
+          articles.map(({ src, text, title }, index) => (
+            <Section
+              key={index}
+              position='relative'
+              mt={{ xs: 30, md: 50 }}
+              width={{ xs: '100%', sm: '30%' }}
+              maxWidth={{ xs: '100%', sm: 320 }}
+            >
+              <RelativeBox width='100%' height={{ xs: 220, md: 320 }}>
+                <ImageComponent
+                  src={src}
+                  layout='fill'
+                  placeholder='blur'
+                />
+              </RelativeBox>
+              <SectionTitle my={20} fontWeight={500} fontSize={{ xs: 18, lg: 19, xl: 20 }}>
+                {title}
+              </SectionTitle>
+              <Article fontSize={{ xs: 14, lg: 15, xl: 16 }}>
+                {text}
+              </Article>
+            </Section>
+          ))
+        }
+      </FlexBox> */}
+      <FlexBox
+        flexWrap={{ xs: 'wrap', lg: 'nowrap' }}
+        justifyContent={{ xs: 'center', sm: 'space-between' }}
+      >
+        {
+          articles_2.map(({ src, text, title }, index) => (
+            <Section
+              key={index}
+              position='relative'
+              mt={{ xs: 30, md: 50 }}
+              width={{ xs: '100%', sm: '30%' }}
+              maxWidth={{ xs: '100%', sm: 320 }}
+            >
+              <Box width='max-content' bg='lightGrey' borderRadius='40px' p={{ xs: 30, lg: 40, xs: 50 }}>
+                <ImageComponent src={src} width={120} height={120} />
+              </Box>
+              <SectionTitle mb={20} fontWeight={500} mt={{ xs: 20, sm: 40 }} fontSize={{ xs: 18, lg: 19, xl: 20 }}>
+                {title}
+              </SectionTitle>
+              <Article fontSize={{ xs: 14, lg: 15, xl: 16 }}>
+                {text}
+              </Article>
+            </Section>
+          ))
+        }
+      </FlexBox>
+    </Section>
     <Box
       width='100vw'
       bg='lightGrey'
-      pt={{ xs: 50, lg: 100, xl: 120 }}
+      pt={{ xs: 25, lg: 50, xl: 60 }}
+      background='url(/images/x-dark.svg) no-repeat bottom right 10% #F8F9FD'
     >
       <Section
         mx='auto'
+        display='flex'
         maxWidth={1200}
+        alignItems='center'
+        flexDirection='column'
         px={{ xs: 20, lg: 40, xl: 0 }}
+        pt={{ xs: 25, lg: 50, xl: 60 }}
+        pb={{ xs: 50, lg: 100, xl: 120 }}
       >
         <PageTitle
           color='mainDark'
+          textAlign='center'
           fontFamily='Ethnocentric'
           fontSize={{ xs: 38, lg: 42, xl: 52 }}
           lineHeight={{ xs: '56px', lg: '62px', xl: '78px' }}
         >
-          Why choose <br />XPath?
+          SERVICES
         </PageTitle>
         <FlexBox
-          flexWrap={{ xs: 'wrap', lg: 'nowrap' }}
-          justifyContent={{ xs: 'center', sm: 'space-between' }}
+          width='100%'
+          maxWidth={500}
+          alignItems='center'
+          mt={{ xs: 20, sm: 40 }}
+          justifyContent='space-between'
+          flexDirection={{ xs: 'column', md: 'row' }}
         >
-          {
-            articles.map(({ src, text, title }, index) => (
-              <Section
-                key={index}
-                position='relative'
-                mt={{ xs: 30, md: 50 }}
-                width={{ xs: '100%', sm: '30%' }}
-                maxWidth={{ xs: '100%', sm: 320 }}
-              >
-                <RelativeBox width='100%' height={{ xs: 220, md: 320 }}>
-                  <ImageComponent
-                    src={src}
-                    layout='fill'
-                    placeholder='blur'
-                  />
-                </RelativeBox>
-                <SectionTitle my={20} fontWeight={500} fontSize={{ xs: 18, lg: 19, xl: 20 }}>
-                  {title}
-                </SectionTitle>
-                <Article fontSize={{ xs: 14, lg: 15, xl: 16 }}>
-                  {text}
-                </Article>
-              </Section>
-            ))
-          }
+          <ul>
+            <li>24/7 Dispatching</li>
+            <li>Invoicing and Factoring</li>
+            <li>Accounting</li>
+          </ul>
+          <ul>
+            <li>24/7 Dispatching</li>
+            <li>Invoicing and Factoring</li>
+            <li>Accounting</li>
+          </ul>
         </FlexBox>
       </Section>
-      <FlexBox
-        maxWidth={1200}
-        background='black'
-        alignItems='center'
-        mb={{ xs: 0, sm: 50 }}
-        mt={{ xs: 50, lg: 120, xl: 150 }}
-        mx={{ sm: 0, md: 20, lg: 40, xl: 'auto' }}
-        flexDirection={{ xs: 'column', sm: 'row' }}
-      >
-        <Section
-          py={{ xs: 20, sm: 0 }}
-          px={{ xs: 20, xl: 60 }}
-          width={{ xs: '100%', sm: '65%' }}
-        >
-          <SectionTitle
-            color='white'
-            fontWeight={500}
-            lineHeight='32px'
-            fontSize={{ xs: 18, lg: 19, xl: 20 }}
-          >
-            Xpath is designed to use technology.
-            Simplifing and automating your back-office operations while keeping you and your clients happy...
-          </SectionTitle>
-          <Article my={30} color='white' fontSize={{ xs: 14, lg: 15, xl: 16 }}>
-            {/* eslint-disable-next-line max-len */}
-            Technology is often an overlooked “super-tool” that can set your truck apart. Xpath uses technology not only to give you the best possible service, but to provide crucial information to your clients so that you build a better relationship with them. We connect directly with your clients using technology so they receive load status updates and all communications necessary for a hands-off experience, establishing a network for repeat business.
-          </Article>
-          <Button
-            fontWeight={500}
-            variant='primary'
-            borderRadius='100px'
-            onClick={handleOpenModal}
-            height={{ xs: 48, lg: 54, xl: 60 }}
-            width={{ xs: 160, lg: 180, xl: 200 }}
-            fontSize={{ xs: 14, lg: 15, xl: 16 }}
-          >
-            Apply Now
-          </Button>
-        </Section>
-        <RelativeBox
-          width={{ xs: '100%', sm: '35%' }}
-          height={{ xs: 470, lg: 600, xl: 650 }}
-        >
-          <ImageComponent
-            layout='fill'
-            placeholder='blur'
-            src='/images/truck_1.png'
-          />
-        </RelativeBox>
-      </FlexBox>
     </Box>
+    <FlexBox
+      maxWidth={1200}
+      background='black'
+      alignItems='center'
+      mt={{ xs: 50, lg: 100, xl: 120 }}
+      mb={{ xs: 0, sm: 50, lg: 100, xl: 120 }}
+      mx={{ sm: 0, md: 20, lg: 40, xl: 'auto' }}
+      flexDirection={{ xs: 'column', sm: 'row' }}
+    >
+      <Section
+        py={{ xs: 20, sm: 0 }}
+        px={{ xs: 20, xl: 60 }}
+        width={{ xs: '100%', sm: '65%' }}
+      >
+        <SectionTitle
+          color='white'
+          fontWeight={500}
+          lineHeight='32px'
+          fontSize={{ xs: 18, lg: 19, xl: 20 }}
+        >
+          Xpath is designed to use technology.
+          Simplifing and automating your back-office operations while keeping you and your clients happy...
+        </SectionTitle>
+        <Article my={30} color='white' fontSize={{ xs: 14, lg: 15, xl: 16 }}>
+          {/* eslint-disable-next-line max-len */}
+          Technology is often an overlooked “super-tool” that can set your truck apart. Xpath uses technology not only to give you the best possible service, but to provide crucial information to your clients so that you build a better relationship with them. We connect directly with your clients using technology so they receive load status updates and all communications necessary for a hands-off experience, establishing a network for repeat business.
+        </Article>
+        <Button
+          fontWeight={500}
+          variant='primary'
+          borderRadius='100px'
+          onClick={handleOpenModal}
+          height={{ xs: 48, lg: 54, xl: 60 }}
+          width={{ xs: 160, lg: 180, xl: 200 }}
+          fontSize={{ xs: 14, lg: 15, xl: 16 }}
+        >
+          Apply Now
+        </Button>
+      </Section>
+      <RelativeBox
+        width={{ xs: '100%', sm: '35%' }}
+        height={{ xs: 470, lg: 600, xl: 650 }}
+      >
+        <ImageComponent
+          layout='fill'
+          placeholder='blur'
+          src='/images/truck_1.png'
+        />
+      </RelativeBox>
+    </FlexBox>
     <Box
       background='black'
       py={{ xs: 50, lg: 120 }}
@@ -222,22 +301,19 @@ const HomePage = ({ handleOpenModal }) => (
           color='white'
           fontFamily='Ethnocentric'
           textTransform='uppercase'
+          mb={{ xs: 30, md: 50, lg: 80 }}
           fontSize={{ xs: 38, lg: 42, xl: 52 }}
         >
           Learn more about Xpath
         </PageTitle>
-        <RelativeBox
-          width='100%'
-          maxWidth={800}
-          mt={{ xs: 30, md: 50, lg: 80 }}
-          height={{ xs: 220, md: 320, lg: 450 }}
+        <Video
+          controls={true}
+          poster='/images/poster.png'
+          height={{ xs: 300, lg: 400, xl: 450 }}
+          width={{ xs: '100%', sm: '48%', md: 600, xl: 720 }}
         >
-          <ImageComponent
-            layout='fill'
-            placeholder='blur'
-            src='/images/image_2.png'
-          />
-        </RelativeBox>
+          <source src='/videos/Xpath Logistics Intro Video Final.mp4' type='video/mp4' />
+        </Video>
       </Section>
     </Box>
     {/* <FlexBox

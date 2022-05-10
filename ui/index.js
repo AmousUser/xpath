@@ -55,6 +55,7 @@ export const Box = styled.div`
   ${display}
   ${minWidth}
   ${position}
+  ${fontSize}
   ${maxWidth}
   ${overflow}
   ${minHeight}
@@ -151,8 +152,8 @@ export const Section = styled.section`
   ${color}
   ${height}
   ${zIndex}
-  ${position}
   ${display}
+  ${position}
   ${maxWidth}
   ${minWidth}
   ${borderTop}
@@ -219,6 +220,7 @@ export const StyledLink = styled.a`
 
   &:hover {
     color: ${({ hoveredColor }) => hoveredColor};
+    text-decoration: underline;
   }
 `;
 
@@ -295,4 +297,16 @@ export const ModalWrapper = styled.div`
 
   background: ${({ background }) => background};
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
+`;
+
+export const Iframe = styled.iframe`
+  ${width}
+  ${height}
+  ${maxWidth}
+`;
+
+export const Video = styled.video`
+  ${width}
+  ${height}
+  ${maxWidth}
 `;

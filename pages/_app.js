@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <title>Xpath</title>
         <meta charSet='utf-8' />
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width user-scalable=0' />
       </Head>
       <GlobalStyles />
       <ThemeProvider theme={Theme}>

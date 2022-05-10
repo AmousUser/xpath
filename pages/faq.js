@@ -1,6 +1,4 @@
 import { useState } from 'react';
-// components
-import ImageComponent from '../components/image';
 // hooks
 import { useWindowSize } from '../hooks/use-window-size';
 // icons
@@ -9,16 +7,13 @@ import Icon from '../icons';
 import {
   Box,
   Text,
+  Video,
   Button,
   Article,
   Section,
   FlexBox,
   PageTitle,
-  AbsoluteBox,
-  RelativeBox,
   ArticleTitle,
-  SectionTitle,
-  RelativeFlexBox,
 } from '../ui';
 // animations
 import { AnimatedBox } from '../ui/animations';
@@ -240,6 +235,87 @@ const QuestionsAnswersComponent = ({ handleOpenModal }) => {
   );
 };
 
+// const DispatchingAccounting = () => (
+//   <Box bg='black'>
+//     <RelativeFlexBox
+//       mx='auto'
+//       maxWidth={1920}
+//       alignItems='center'
+//       justifyContent='center'
+//       px={{ xs: 20, sm: 40, lg: 80 }}
+//       py={{ xs: 0, sm: 0, md: 40, lg: 80 }}
+//       flexDirection={{ xs: 'column', md: 'row' }}
+//     >
+//       <AbsoluteBox
+//         top='0'
+//         left='0'
+//         zIndex={1}
+//         maxWidth={960}
+//         width={{ xs: '100%', md: '50%' }}
+//         height={{ xs: 320, sm: 250, md: '100%' }}
+//       >
+//         <ImageComponent layout='fill' placeholder='blur' src='/images/dispatching.png' />
+//       </AbsoluteBox>
+//       <AbsoluteBox
+//         right='0'
+//         zIndex={1}
+//         bottom='0'
+//         maxWidth={960}
+//         width={{ xs: '100%', md: '50%' }}
+//         height={{ xs: 320, sm: 250, md: '100%' }}
+//       >
+//         <ImageComponent layout='fill' placeholder='blur' src='/images/accounting.png' />
+//       </AbsoluteBox>
+//       <Section
+//         zIndex={1}
+//         maxWidth={600}
+//         display='flex'
+//         flexDirection='column'
+//         justifyContent='center'
+//         mr={{ xs: 0, md: 40, lg: 80 }}
+//         height={{ xs: 320, sm: 250, md: '100%' }}
+//       >
+//         <SectionTitle
+//           color='white'
+//           style={{ zIndex: 2 }}
+//           textTransform='uppercase'
+//           fontFamily='Ethnocentric'
+//           fontSize={{ xs: 30, xl: 36 }}
+//         >
+//           Dispatching
+//         </SectionTitle>
+//         <Article
+//           mt={30}
+//           color='white'
+//           lineHeight='160%'
+//           fontSize={{ xs: 14, lg: 15, xl: 16 }}
+//         >
+//         </Article>
+//       </Section>
+//       <Section
+//         zIndex={2}
+//         maxWidth={600}
+//         display='flex'
+//         flexDirection='column'
+//         justifyContent='center'
+//         ml={{ xs: 0, md: 40, lg: 80 }}
+//         height={{ xs: 320, sm: 250, md: '100%' }}
+//       >
+//         <SectionTitle
+//           color='white'
+//           textTransform='uppercase'
+//           fontFamily='Ethnocentric'
+//           fontSize={{ xs: 30, xl: 36 }}
+//         >
+//           Accounting
+//         </SectionTitle>
+//         <Article mt={30} color='white' lineHeight='160%' fontSize={{ xs: 14, lg: 15, xl: 16 }}>
+//         </Article>
+//       </Section>
+//     </RelativeFlexBox>
+//   </Box>
+// );
+
 const FAQPage = ({ handleOpenModal }) => (
   <>
     <Box
@@ -259,9 +335,9 @@ const FAQPage = ({ handleOpenModal }) => (
         <Section width={{ xs: '100%', sm: 320 }}>
           <PageTitle
             color='white'
+            fontSize={36}
             textTransform='uppercase'
             fontFamily='Ethnocentric'
-            fontSize={36}
             lineHeight={{ xs: '52px', xl: '65px' }}
           >
             Frequently <br /> asked <br /> questions
@@ -280,100 +356,14 @@ const FAQPage = ({ handleOpenModal }) => (
             Ask Additional Questions
           </Button>
         </Section>
-        <RelativeBox
-          maxWidth={720}
-          height={{ xs: 300, lg: 400, xl: 450 }}
-          width={{ xs: '100%', sm: 'calc(100% - 350px)' }}
+        <Video
+          controls={true}
+          poster='/images/poster.png'
+          width={{ xs: '100%', sm: '48%', md: 600, xl: 720 }}
         >
-          <ImageComponent
-            layout='fill'
-            placeholder='blur'
-            src='/images/image_2.png'
-          />
-        </RelativeBox>
+          <source src='/videos/Xpath Logistics Intro Video Final.mp4' type='video/mp4' />
+        </Video>
       </FlexBox>
-    </Box>
-    <Box bg='black'>
-      <RelativeFlexBox
-        mx='auto'
-        maxWidth={1920}
-        alignItems='center'
-        justifyContent='center'
-        px={{ xs: 20, sm: 40, lg: 80 }}
-        py={{ xs: 0, sm: 0, md: 40, lg: 80 }}
-        flexDirection={{ xs: 'column', md: 'row' }}
-      >
-        <AbsoluteBox
-          top='0'
-          left='0'
-          zIndex={1}
-          maxWidth={960}
-          width={{ xs: '100%', md: '50%' }}
-          height={{ xs: 320, sm: 250, md: '100%' }}
-        >
-          <ImageComponent layout='fill' placeholder='blur' src='/images/dispatching.png' />
-        </AbsoluteBox>
-        <AbsoluteBox
-          right='0'
-          zIndex={1}
-          bottom='0'
-          maxWidth={960}
-          width={{ xs: '100%', md: '50%' }}
-          height={{ xs: 320, sm: 250, md: '100%' }}
-        >
-          <ImageComponent layout='fill' placeholder='blur' src='/images/accounting.png' />
-        </AbsoluteBox>
-        <Section
-          zIndex={1}
-          maxWidth={600}
-          display='flex'
-          flexDirection='column'
-          justifyContent='center'
-          mr={{ xs: 0, md: 40, lg: 80 }}
-          height={{ xs: 320, sm: 250, md: '100%' }}
-        >
-          <SectionTitle
-            color='white'
-            style={{ zIndex: 2 }}
-            textTransform='uppercase'
-            fontFamily='Ethnocentric'
-            fontSize={{ xs: 30, xl: 36 }}
-          >
-            Dispatching
-          </SectionTitle>
-          <Article
-            mt={30}
-            color='white'
-            lineHeight='160%'
-            fontSize={{ xs: 14, lg: 15, xl: 16 }}
-          >
-            {/* eslint-disable-next-line */}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </Article>
-        </Section>
-        <Section
-          zIndex={2}
-          maxWidth={600}
-          display='flex'
-          flexDirection='column'
-          justifyContent='center'
-          ml={{ xs: 0, md: 40, lg: 80 }}
-          height={{ xs: 320, sm: 250, md: '100%' }}
-        >
-          <SectionTitle
-            color='white'
-            textTransform='uppercase'
-            fontFamily='Ethnocentric'
-            fontSize={{ xs: 30, xl: 36 }}
-          >
-            Accounting
-          </SectionTitle>
-          <Article mt={30} color='white' lineHeight='160%' fontSize={{ xs: 14, lg: 15, xl: 16 }}>
-            {/* eslint-disable-next-line */}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </Article>
-        </Section>
-      </RelativeFlexBox>
     </Box>
     <QuestionsAnswersComponent handleOpenModal={handleOpenModal} />
   </>

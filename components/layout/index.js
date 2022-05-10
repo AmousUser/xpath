@@ -3,7 +3,7 @@ import Portal from '../portal';
 import Footer from '../footer';
 import Header from '../header';
 // forms
-import ApplyNowFormComponent from '../../forms/apply-now';
+import ApplyNowForm from '../../forms/apply-now';
 // ui
 import { ModalWrapper } from '../../ui';
 //////////////////////////////////////////////////
@@ -19,7 +19,7 @@ const Layout = ({ router, children, modalOpened, handleOpenModal, handleCloseMod
       modalOpened && (
         <Portal selector='#modal'>
           <ModalWrapper background='rgba(0, 0, 0, 0.8)'>
-            <ApplyNowFormComponent handleCloseModal={handleCloseModal} />
+            <ApplyNowForm handleCloseModal={handleCloseModal} />
           </ModalWrapper>
         </Portal>
       )
