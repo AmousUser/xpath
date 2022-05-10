@@ -13,6 +13,7 @@ export default createGlobalStyle`
     }
 
     ul {
+      width: 230px;
       line-height: 40px;
     }
 

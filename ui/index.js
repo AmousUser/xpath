@@ -211,6 +211,7 @@ export const StyledLink = styled.a`
   ${opacity}
   ${fontSize}
   ${textAlign}
+  ${fontFamily}
   ${fontWeight}
   ${justifyContent}
 

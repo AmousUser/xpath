@@ -21,8 +21,8 @@ exports.sendMail = functions.https.onRequest((req, res) => {
       secure: true,
       host: "smtp.gmail.com",
       auth: {
-        pass: "cube2018",
-        user: "amous03.23.2022@gmail.com",
+        pass: "Xpathtrucking",
+        user: "applyxpathlogistics@gmail.com",
       },
     });
 

@@ -65,7 +65,7 @@ const contactsColumn = {
     {
       ml: 10,
       icon: 'phoneIcon',
-      name: '(904) 604-8904',
+      name: '904-604-8904',
       textDecoration: 'underline',
       linkTo: 'tel: +19046048904',
     },
