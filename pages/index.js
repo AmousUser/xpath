@@ -116,7 +116,7 @@ const HomePage = ({ handleOpenModal }) => {
           textTransform='uppercase'
           fontSize={{ xs: 36,lg: 40, xl: 46 }}
         >
-          our owner-ops save 15-20% per load
+          our owner-ops save 15-20<span style={{ fontFamily: 'Arial' }}>%</span> per load
         </SectionTitle>
       </Section>
       <Section
